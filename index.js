@@ -1,10 +1,13 @@
 import * as fs from "fs";
 import * as csv from "fast-csv";
 import Fuse from "fuse.js";
-
 import express from "express";
 import bodyParser from "body-parser";
+import cors from "cors";
+
 const app = express();
+app.use(cors());
+
 const port = process.env.PORT || 3000;
 
 const options = {
