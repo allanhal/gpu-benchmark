@@ -41,7 +41,7 @@ app.get("/:query", (req, res) => {
   getCSVData((data) => {
     const fuse = new Fuse(data, options);
     const result = fuse.search(query);
-    res.send(result?.[0].item);
+    res.send(result?.[0]?.item);
   });
 });
 
